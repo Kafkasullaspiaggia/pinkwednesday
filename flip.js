@@ -1,7 +1,11 @@
-const flipCards = document.querySelectorAll('.flip-card');
+const imageContainers = document.querySelectorAll('.image-container');
 
-flipCards.forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
+imageContainers.forEach(container => {
+  container.addEventListener('mouseover', () => {
+    container.classList.add('flipped');
+  });
+
+  container.addEventListener('mouseout', () => {
+    container.classList.remove('flipped');
   });
 });
