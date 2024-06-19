@@ -7,6 +7,7 @@
     width: 200px; /* Regola la larghezza della carta */
     height: 300px; /* Regola l'altezza della carta */
     transform-style: preserve-3d; /* Mantiene la forma 3D durante la trasformazione */
+    border-radius: 10px; /* Arrotonda gli angoli della carta */
 }
 
 .front,
@@ -30,10 +31,6 @@
 
 .flip-card:hover .front {
     transform: rotateY(180deg); /* Ruota il lato frontale di 180 gradi su hover */
-}
-
-.flip-card:active .front {
-    transform: rotateY(180deg); /* Ruota il lato frontale di 180 gradi su click */
 }
 
 .front img {
