@@ -1,22 +1,22 @@
 .image-container {
-    perspective: 400px; /* Distanza di visione per l'effetto 3D */
+    perspective: 400px;
     position: relative;
-    width: 300px; /* Larghezza del contenitore */
-    height: 200px; /* Altezza del contenitore */
+    width: 300px;
+    height: 200px;
   }
   
   .image-container img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 150%;
     position: absolute;
     top: 0;
     left: 0;
     backface-visibility: hidden;
-    transition: transform 0.5s ease-in-out; /* Durata e animazione del flip */
+    transition: transform 0.5s ease-in-out;
   }
   
   .image-container.flipped img {
-    transform: rotateY(180deg); /* Angolo di rotazione per il flip */
+    transform: rotateY(180deg);
   }
   
   .image-container .text-back {
@@ -26,9 +26,9 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    display: none; /* Nascondi il testo per impostazione predefinita */
+    display: none;
   }
   
   .image-container.flipped .text-back {
-    display: block; /* Mostra il testo quando capovolto */
+    display: block;
   }
