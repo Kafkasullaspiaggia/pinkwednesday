@@ -1,0 +1,51 @@
+.flip-container {
+    perspective: 1000px; /* Imposta la prospettiva per l'effetto 3D */
+}
+
+.flip-card {
+    position: relative;
+    width: 200px; /* Regola la larghezza della carta */
+    height: 300px; /* Regola l'altezza della carta */
+    transform-style: preserve-3d; /* Mantiene la forma 3D durante la trasformazione */
+}
+
+.front,
+.back {
+    position: absolute;
+    backface-visibility: hidden; /* Nasconde il lato non visibile */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* Animazione di rotazione fluida */
+}
+
+.front {
+    z-index: 2; /* Posiziona il lato frontale sopra il retro */
+}
+
+.back {
+    transform: rotateY(180deg); /* Ruota il lato posteriore di 180 gradi */
+}
+
+.flip-card:hover .front {
+    transform: rotateY(180deg); /* Ruota il lato frontale di 180 gradi su hover */
+}
+
+.flip-card:active .front {
+    transform: rotateY(180deg); /* Ruota il lato frontale di 180 gradi su click */
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni dell'immagine coprendo l'intera area */
+}
+
+.back p {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #fff; /* Testo bianco */
+    margin: 0;
+}
