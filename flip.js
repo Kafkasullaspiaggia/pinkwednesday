@@ -1,9 +1,5 @@
-const flipcard = document.querySelector('.flipcard');
+const flipCard = document.querySelector('.flip-card');
 
-flipcard.addEventListener('mouseover', () => {
-  flipcard.classList.add('flipped');
-});
-
-flipcard.addEventListener('mouseout', () => {
-  flipcard.classList.remove('flipped');
+flipCard.addEventListener('click', () => {
+  flipCard.classList.toggle('flipped');
 });
