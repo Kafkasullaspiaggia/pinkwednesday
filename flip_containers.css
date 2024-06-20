@@ -1,17 +1,3 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 10px;
-  background-color: #FFFFFF;
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: #FFFFFF;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
 
 body{
   height: 100vh;
