@@ -1,42 +1,48 @@
-.image-container {
-  width: 50px; /* Adjust width as needed */
-  height: 50px; /* Adjust height as needed */
-  margin: 0 auto; /* Center the container */
-  position: relative; /* Required for 3D positioning */
-  overflow: hidden; /* Hide overflow when flipped */
-  perspective: 150px; /* Set perspective for 3D flip effect */
-  transition: transform 0.5s ease-in-out; /* Smooth transition for flip */
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
 }
 
-.image-container:hover {
-  transform: rotateY(180deg); /* Flip on hover */
+.card{
+  height: 340px;
+  width: 250px;
+  position: relative;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
 }
 
-.image-container img {
-  width: 100%;
+.front,
+.back{
   height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-}
-
-.flip-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: 'Lobster', cursive;
+  border-radius: 10px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Hide the back content initially */
-  transform: rotateY(180deg); /* Start the back content hidden */
-  transition: transform 0.5s ease-in-out; /* Smooth transition for flip */
 }
 
-.image-container:hover .flip-content {
-  transform: rotateY(0deg); /* Bring the back content to the front on hover */
+.front{
+  background-image: url("https://lh3.googleusercontent.com/a-/ALV-UjWfVx7RtpeVfJaUaSCIavudKA308GjdGITq8cKDYlSxSWKan-va=s600-p");
+  z-index: 2;
+  backface-visibility: hidden;
 }
 
-.flip-content p {
-  text-align: center;
-  vertical-align: middle;
-  color: white;
-  font-size: 16px;
-  margin: 0;
+.back{
+  background: linear-gradient(#FFFFFF, #FFFFFF);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.container:hover .card{
+  transform: rotateY(180deg);
+}
+
+.container{
+  perspective: 1000px;
 }
