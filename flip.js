@@ -1,11 +1,9 @@
-const imageContainers = document.querySelectorAll('.image-container');
+const flipcard = document.querySelector('.flipcard');
 
-imageContainers.forEach(container => {
-  container.addEventListener('mouseover', () => {
-    container.classList.add('flipped');
-  });
+flipcard.addEventListener('mouseover', () => {
+  flipcard.classList.add('flipped');
+});
 
-  container.addEventListener('mouseout', () => {
-    container.classList.remove('flipped');
-  });
+flipcard.addEventListener('mouseout', () => {
+  flipcard.classList.remove('flipped');
 });
