@@ -1,40 +1,33 @@
-.flipcard {
-    perspective: 150px; /* Set perspective for 3D flip effect */
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    margin: 0 auto; /* Center the flipcard */
-    position: relative; /* Required for 3D positioning */
-  }
-  
-  .front,
-  .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    backface-visibility: hidden; /* Hide the back side initially */
-    transform-style: preserve-3d; /* Preserve 3D context */
-  }
-  
-  .front {
-    transform: rotateY(0deg); /* Start the front facing the viewer */
-    z-index: 2; /* Place the front on top */
-  }
-  
-  .back {
-    transform: rotateY(-180deg); /* Start the back hidden */
-    z-index: 1; /* Place the back behind */
-  }
-  
-  .flipcard.flipped {
-    transform: rotateY(-180deg); /* Flip the flipcard on hover */
-  }
-  
-  .flipcard.flipped .front {
-    transform: rotateY(-180deg); /* Rotate the front back to face the viewer */
-  }
-  
-  .flipcard.flipped .back {
-    transform: rotateY(0deg); /* Rotate the back to face the viewer */
-  }
+.flip-card {
+  perspective: 500px; /* Distanza di visione per l'effetto 3D */
+  position: relative;
+  width: 100px; /* Larghezza della flipcard */
+  height: 50px; /* Altezza della flipcard */
+  margin: 20px auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out; /* Durata e animazione del flip */
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  backface-visibility: hidden;
+  text-align: center;
+  line-height: 100px; /* Centra verticalmente il testo */
+}
+
+.flip-card-front {
+  z-index: 2; /* Posiziona il fronte sopra il retro */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(90deg); /* Ruota la carta di 90 gradi a destra al passaggio del mouse */
+}
