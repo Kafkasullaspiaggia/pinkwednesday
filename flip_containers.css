@@ -3,12 +3,12 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FFFFF;
+  background: #FFFFFF;
 }
 
 .card{
-  height: 340px;
-  width: 250px;
+  height: 240px;
+  width: 150px;
   position: relative;
   transition: all 1s linear;
   transform-style: preserve-3d;
