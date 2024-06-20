@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tre colonne */
+  grid-template-columns: repeat(1, 1fr); /* Tre colonne */
   grid-gap: 10px; /* Spazio tra le flipcard */
 }
 
@@ -20,8 +20,8 @@ body{
 }
 
 .card{
-  height: 240px;
-  width: 150px;
+  height: 500px;
+  width: 340px;
   position: relative;
   transition: all 1s linear;
   transform-style: preserve-3d;
@@ -35,7 +35,7 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 3em;
-  font-family: 'Lobster', cursive;
+  font-family: 'Google sans', normal;
   border-radius: 10px;
   position: absolute;
 }
@@ -44,6 +44,7 @@ body{
   background-image: url("https://lh3.googleusercontent.com/a-/ALV-UjWfVx7RtpeVfJaUaSCIavudKA308GjdGITq8cKDYlSxSWKan-va=s600-p");
   z-index: 2;
   backface-visibility: hidden;
+  background-size: cover;
 }
 
 .back{
