@@ -1,14 +1,16 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Tre colonne */
-  grid-gap: 0px; /* Spazio tra le flipcard */
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  background-color: #FFFFFF;
+  padding: 10px;
 }
 
-.grid-item {
-  background-color: #fff;
-  border: 1px solid #fff;
+.grid-container > div {
+  background-color: #FFFFFF;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
 body{
@@ -20,10 +22,10 @@ body{
 }
 
 .card{
-  height: 340px;
-  width: 240px;
+  height: 500px;
+  width: 340px;
   position: relative;
-  transition: all 0.5s linear;
+  transition: all 1s linear;
   transform-style: preserve-3d;
 }
 
