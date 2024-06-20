@@ -1,3 +1,16 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre colonne */
+  grid-gap: 10px; /* Spazio tra le flipcard */
+}
+
+.grid-item {
+  background-color: #000;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
 body{
   height: 100vh;
   display: flex;
