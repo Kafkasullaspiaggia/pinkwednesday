@@ -1,7 +1,7 @@
 .flipcard {
     perspective: 150px; /* Set perspective for 3D flip effect */
-    width: 300px; /* Adjust width as needed */
-    height: 450px; /* Adjust height as needed */
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
     margin: 0 auto; /* Center the flipcard */
     position: relative; /* Required for 3D positioning */
   }
@@ -11,8 +11,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     backface-visibility: hidden; /* Hide the back side initially */
     transform-style: preserve-3d; /* Preserve 3D context */
   }
@@ -28,11 +28,11 @@
   }
   
   .flipcard.flipped {
-    transform: rotateY(180deg); /* Flip the flipcard on hover */
+    transform: rotateY(-180deg); /* Flip the flipcard on hover */
   }
   
   .flipcard.flipped .front {
-    transform: rotateY(0deg); /* Rotate the front back to face the viewer */
+    transform: rotateY(-180deg); /* Rotate the front back to face the viewer */
   }
   
   .flipcard.flipped .back {
