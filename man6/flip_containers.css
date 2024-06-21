@@ -1,0 +1,49 @@
+body{
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #FFFFFF;
+  }
+  
+  .card{
+    height: 300px;
+    width: 240px;
+    position: relative;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Google sans', normal;
+    border-radius: 10px;
+    position: absolute;
+  }
+  
+  .front{
+    background-image: url("https://lh3.googleusercontent.com/a-/ALV-UjXWDM1pnJqeFemrQlC2opQw78J7vevaC9nMT4fD4xePtLnA44ER=s600-p");
+    z-index: 2;
+    backface-visibility: hidden;
+    background-size: cover;
+  }
+  
+  .back{
+    background: linear-gradient(#FFFFFF, #FFFFFF);
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  
+  .container:hover .card{
+    transform: rotateY(180deg);
+  }
+  
+  .container{
+    perspective: 1000px;
+  }
