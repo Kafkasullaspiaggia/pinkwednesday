@@ -22,6 +22,6 @@
 }
 
 @keyframes scroll {
-    from { left: 100%; }
-    to { left: -100%; } /* Move text completely off-screen to the left */
+    from { right: 100%; }
+    to { right: -100%; } /* Move text completely off-screen to the left */
 }
