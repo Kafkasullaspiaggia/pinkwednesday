@@ -18,7 +18,7 @@
     border-radius: 10px; /* Apply rounded corners */
     background-color: #ccc; /* Set background color to gray */
     padding: 10px; /* Add padding around the text */
-    animation: scroll 30s linear infinite reverse; /* Animate movement */
+    animation: scroll 25s linear infinite reverse; /* Animate movement */
 }
 
 @keyframes scroll {
