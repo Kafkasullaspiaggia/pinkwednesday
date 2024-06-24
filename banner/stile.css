@@ -12,7 +12,7 @@
     left: 100%; /* Start text off-screen to the right */
     white-space: nowrap; /* Prevent line breaks */
     font-family: 'Google Sans', normal; /* Set font family to Google Sans */
-    font-size: 12px; /* Set font size to 12px */
+    font-size: 15px; /* Set font size to 12px */
     color: #000;
     text-align: center; /* Center text alignment */
     border-radius: 10px; /* Apply rounded corners */
