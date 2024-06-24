@@ -1,0 +1,27 @@
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 50px; 
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.banner-text {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start text off-screen to the right */
+    white-space: nowrap; /* Prevent line breaks */
+    font-family: 'Google Sans', normal; /* Set font family to Google Sans */
+    font-size: 12px; /* Set font size to 12px */
+    color: #000;
+    text-align: center; /* Center text alignment */
+    border-radius: 10px; /* Apply rounded corners */
+    background-color: #ccc; /* Set background color to gray */
+    padding: 10px; /* Add padding around the text */
+    animation: scroll 30s linear infinite reverse; /* Animate movement */
+}
+
+@keyframes scroll {
+    from { left: 100%; }
+    to { left: -100%; } /* Move text completely off-screen to the left */
+}
