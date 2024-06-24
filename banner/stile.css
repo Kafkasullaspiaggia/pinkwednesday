@@ -9,7 +9,7 @@
 .banner-text {
     position: absolute;
     top: 0;
-    left: 100%; /* Start text off-screen to the right */
+    right: 100%; /* Start text off-screen to the right */
     white-space: nowrap; /* Prevent line breaks */
     font-family: 'Google Sans', normal; /* Set font family to Google Sans */
     font-size: 15px; /* Set font size to 12px */
@@ -23,5 +23,5 @@
 
 @keyframes scroll {
     from { right: 100%; }
-    to { right: -100%; } /* Move text completely off-screen to the left */
+    to { left: -100%; } /* Move text completely off-screen to the left */
 }
