@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background: #FFFFFF;
+    background: #ffffff00;
   }
   
   .card{
