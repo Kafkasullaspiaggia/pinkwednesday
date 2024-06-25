@@ -1,48 +1,49 @@
 body{
-    height: 50vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background: #ffffff00;
-  }
-  
-  .card{
-    height: 300px;
-    width: 240px;
-    position: relative;
-    transition: all 0.5s linear;
-    transform-style: preserve-3d;
-  }
-  
-  .front,
-  .back{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    font-family: 'Google sans', normal;
-    border-radius: 10px;
-    position: absolute;
-  }
-  
-  .front{
-    background-image: url("https://lh3.googleusercontent.com/chat_attachment/AP1Ws4sVk-nO4mq3VIKxiElNiEjdoq_-lqQuggk1bEtpRUIIeefRhr5ltvHOiI_XOsGpPiTFA2C6PN6myfR87v_wss6erJ2sPRa0qS1zywB23Vezw-ZSsBz37v8J-sShOEqeJ-TKJbMCpY310h2zsYtSO_LI-culcqG-hHuSBOnjRqv7zWhTEHb9hBhATNHkLuOg7ZO2rexKmhIxX_j3t-uXCNmkHWMUQH2Ab--ePpQAd_yaAmUNmito4Xk7QtFak5jd8ZZelLHbqskTjg80Iv9GflnXIsRU44UqO_6PKWvUN8FggBGHFccrr2W-OGVBVaw4IhA=w512");
-    backface-visibility: hidden;
-    background-size: cover;
-  }
-  
-  .back{
-    background: linear-gradient(#FFFFFF, #FFFFFF);
-    z-index: 1;
-    transform: rotateY(180deg);
-  }
-  
-  .container:hover .card{
-    transform: rotateY(180deg);
-  }
-  
-  .container{
-    perspective: 1000px;
-  }
+  height: 50vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #ffffff00;
+}
+
+.card{
+  height: 300px;
+  width: 240px;
+  position: relative;
+  transition: all 0.5s linear;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: 'Google sans', normal;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.front{
+  background-image: url("https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEVnocnpgtLrY3HKKEzuYYc4%2BwPmjxwLzHldj863iiE3IASd%2Bv5RDVuB0XaiEm2Eq4XmOsZXbKL4i4kVbOdW2IddsXwkbS%2FI%2BtKoX%2FQ5zwY7uaY82G4JDWOE%2FzS9g2fKZB5ICyWvl2qXbnhGfP8gN1xFEk9ERMWokvs3YWa1uhJeuwfuqjig9TOnaEpxxMqBFXoVIb3gqqnrUWI0mzwwOdHEmCx%2FsBsnDiKgT%2B4EjREi6TCQJA2uSFYpqlnpbc3m%2B4t3UDGYLAeY%2FjJzYpyaFBPaXpqOYLCYQY6PxcDDJUACHXU3NxKFrJBwRm%2BkxPkI8uEPMLEMa4aLpPyliv1cCxAiB%2BWeki3Li80H8lzUL3%2FpWE7FpZ8VPnl2jKbApGONcNKGgbRrFE0aL%2FMDpX6ML2Z2ozqhPWrDEAc1uX9jciRpz%2FdY1IVX%2FYq%2B%2BPUsLbBjpG0PImWyAu87vwwU%2BEdE4fbd4a9grZbj7cY6BBoCdgjtxUMgBe7AvevwFpP%2Ba80KAXCqWlOn9rpLa8euzCGaOTCPVAhacCUMgieDNEXiIiutCndKiBWGSruGvGFqgbJFI9p1mznZpucWcrzQRRWf&sz=w512");
+  z-index: 2;
+  backface-visibility: hidden;
+  background-size: cover;
+}
+
+.back{
+  background: linear-gradient(#FFFFFF, #FFFFFF);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.container:hover .card{
+  transform: rotateY(180deg);
+}
+
+.container{
+  perspective: 1000px;
+}
