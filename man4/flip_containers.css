@@ -28,7 +28,7 @@ body{
   }
   
   .front{
-    background-image: url("https://github.com/Kafkasullaspiaggia/pinkwednesday/blob/main/man4/png/sara.png");
+    background-image: url("https://lh3.googleusercontent.com/chat_attachment/AP1Ws4t9gtrWaIKpLynfYSv8K-fRMV9fexpAyQk8dxAmugqEtVtIoJhKIfxQjy2ZcR2HVgbaZ-ASNhrLjd375CNyKKFD9W9IEn6bqiuJy7NDv97yVp15pMthoy1grQtIKs4DIuw6mjOiO9Dtvnj1RnxGCP_afOZOHCYEA778OuP9-QuemUrALmSC5cM9wJs-CjyVqmepPIEnir1xCdISwSjLNvJtDJ7fQBLm3Ozy4ZZz6RXMYUhhXguKECYnZhNTONx_AcZt73l3nB7Q_tXuTHUjXwswCzlOqUkQHhwvzUeIopZNP6ehihharaEAQhBts1d3784=w576-h999");
     z-index: 2;
     backface-visibility: hidden;
     background-size: cover;
