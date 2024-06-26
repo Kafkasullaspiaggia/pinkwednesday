@@ -44,8 +44,11 @@ function moveBubbles(bubble) {
   bubble.style.top = parseFloat(bubble.style.top) + speedY + 'px';
 
   // Keep bubbles within the viewport boundaries
-  bubble.style.left = Math.max(0, Math.min(bubble.style.left, window.innerWidth - bubble.offsetWidth));
-  bubble.style.top = Math.max(0, Math.min(bubble.style.top, window.innerHeight - bubble.offsetHeight));
+  const centralX = window.innerWidth / 2;
+  const centralY = window.innerHeight / 2;
+  const maxRadius = Math.min(centralX, centralY) - bubble.offsetWidth / 2; // Adjust for bubble size
+  bubble.style.left = Math.max(centralX - maxRadius, Math.min(bubble.style.left, centralX + maxRadius));
+  bubble.style.top = Math.max(centralY - maxRadius, Math.min(bubble.style.top, centralY + maxRadius));
 
   // Schedule the next animation frame
   requestAnimationFrame(function() {
