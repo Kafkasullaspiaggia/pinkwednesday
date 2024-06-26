@@ -36,8 +36,8 @@ function createBubble(image, link) {
 
 function moveBubbles(bubble) {
   // Randomize speed
-  const speedX = Math.random() * 5 - 2;
-  const speedY = Math.random() * 5 - 2;
+  const speedX = Math.random() * 10 - 8;
+  const speedY = Math.random() * 10 - 8;
 
   // Update bubble position based on speed
   bubble.style.left = parseFloat(bubble.style.left) + speedX + 'px';
