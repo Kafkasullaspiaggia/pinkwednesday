@@ -36,16 +36,32 @@ function createBubble(image, link) {
 
 function moveBubbles(bubble) {
   // Randomize speed
-  const speedX = Math.random() * 2 - 1;
-  const speedY = Math.random() * 2 - 1;
+  const speedX = Math.random() * 4 - 2;
+  const speedY = Math.random() * 4 - 2;
 
   // Update bubble position based on speed
   bubble.style.left = parseFloat(bubble.style.left) + speedX + 'px';
   bubble.style.top = parseFloat(bubble.style.top) + speedY + 'px';
 
-  // Keep bubbles within the viewport boundaries
-  bubble.style.left = Math.max(0, Math.min(bubble.style.left, window.innerWidth - bubble.offsetWidth));
-  bubble.style.top = Math.max(0, Math.min(bubble.style.top, window.innerHeight - bubble.offsetHeight));
+  // Check for edge collisions and reverse direction
+  const bubbleWidth = bubble.offsetWidth;
+  const bubbleHeight = bubble.offsetHeight;
+
+  if (bubble.style.left + bubbleWidth >= window.innerWidth) {
+    speedX *= -1;
+    bubble.style.left = window.innerWidth - bubbleWidth - bubble.offsetWidth / 2 + 'px'; // Adjust position
+  } else if (bubble.style.left <= 0) {
+    speedX *= -1;
+    bubble.style.left = 0 + bubble.offsetWidth / 2 + 'px'; // Adjust position
+  }
+
+  if (bubble.style.top + bubbleHeight >= window.innerHeight) {
+    speedY *= -1;
+    bubble.style.top = window.innerHeight - bubbleHeight - bubble.offsetHeight / 2 + 'px'; // Adjust position
+  } else if (bubble.style.top <= 0) {
+    speedY *= -1;
+    bubble.style.top = 0 + bubble.offsetHeight / 2 + 'px'; // Adjust position
+  }
 
   // Schedule the next animation frame
   requestAnimationFrame(function() {
