@@ -28,7 +28,7 @@ body{
   }
   
   .front{
-    background-image: url("https://moma-teams-photos.corp.google.com/photos/frpineda?sz=600&type=SECURITY&type=SILHOUETTE");
+    background-image: url("https://lh3.googleusercontent.com/chat_attachment/AP1Ws4vL4aGo7TTpA-vChCrDy-OVKpcHZJbuLdQfyMKTc3Y0m8B3ji6QiJXfWd131jNibg1qdERYBmG-izqByNqRkx-D_YNGtPk-YOWHPONlOLRzYTrf6ky-huOC2s-6FfP4YKkdXMmRU3EFBEjOtGj89Ei4MZoC3Yqwa6QnAyF7w6OFY7IUCwpVRw5cyP_ulEoJn08-NjEdjBrmHcZonNBW_ooF-NzYjWBzZcfBC9dbaeoyDBqt7EwjFI_fylxQKsmQnw2n0dcf6UJeJv8OLgVacJvXYSiJHKfDojrDljd8mItmVgJY84ppTl5qd7jErF0IUnM=w576-h999");
     z-index: 2;
     backface-visibility: hidden;
     background-size: cover;
