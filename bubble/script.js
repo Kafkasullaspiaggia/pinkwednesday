@@ -11,28 +11,31 @@ const links = [
 ];
 
 function createBubble(image, link) {
-  const bubble = document.createElement('div');
-  bubble.classList.add('bubble');
-
-  const img = document.createElement('img');
-  img.src = image;
-  bubble.appendChild(img);
-
-  bubble.addEventListener('click', () => {
-    window.open(link, '_blank'); // Open link in a new tab
-  });
-
-  bubbleContainer.appendChild(bubble);
-
-  // Generate random values for position and size
-  const newX = Math.random() * (window.innerWidth - bubble.offsetWidth);
-  const newY = Math.random() * (window.innerHeight - bubble.offsetHeight);
-  bubble.style.left = newX + 'px';
-  bubble.style.top = newY + 'px';
-
-  // Add bubble to animation loop
-  moveBubbles(bubble);
-}
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+  
+    const img = document.createElement('img');
+    img.src = image;
+    bubble.appendChild(img);
+  
+    bubble.addEventListener('click', () => {
+      window.open(link, '_blank'); // Open link in a new tab
+    });
+  
+    bubbleContainer.appendChild(bubble);
+  
+    // Generate random values for position within the central area
+    const centralX = window.innerWidth / 2;
+    const centralY = window.innerHeight / 2;
+    const maxRadius = Math.min(centralX, centralY) - bubble.offsetWidth / 2; // Adjust for bubble size
+    const newX = centralX + (Math.random() - 0.5) * maxRadius * 2;
+    const newY = centralY + (Math.random() - 0.5) * maxRadius * 2;
+    bubble.style.left = newX + 'px';
+    bubble.style.top = newY + 'px';
+  
+    // Add bubble to animation loop
+    moveBubbles(bubble);
+  }  
 
 function moveBubbles(bubble) {
     // Randomize speed
