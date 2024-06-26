@@ -36,18 +36,16 @@ function createBubble(image, link) {
 
 function moveBubbles(bubble) {
   // Randomize speed
-  const speedX = Math.random() * 10 - 8;
-  const speedY = Math.random() * 10 - 8;
+  const speedX = Math.random() * 2 - 1;
+  const speedY = Math.random() * 2 - 1;
 
   // Update bubble position based on speed
   bubble.style.left = parseFloat(bubble.style.left) + speedX + 'px';
   bubble.style.top = parseFloat(bubble.style.top) + speedY + 'px';
 
   // Keep bubbles within the viewport boundaries
-  const bubbleWidth = bubble.offsetWidth;
-  const bubbleHeight = bubble.offsetHeight;
-  bubble.style.left = Math.max(0, Math.min(bubble.style.left, window.innerWidth - bubbleWidth));
-  bubble.style.top = Math.max(0, Math.min(bubble.style.top, window.innerHeight - bubbleHeight));
+  bubble.style.left = Math.max(0, Math.min(bubble.style.left, window.innerWidth - bubble.offsetWidth));
+  bubble.style.top = Math.max(0, Math.min(bubble.style.top, window.innerHeight - bubble.offsetHeight));
 
   // Schedule the next animation frame
   requestAnimationFrame(function() {
