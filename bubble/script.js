@@ -36,41 +36,44 @@ function createBubble(image, link) {
 
 function moveBubbles(bubble) {
     // Randomize speed
-    const speedX = Math.random() * 5 - 2;
-    const speedY = Math.random() * 5 - 2;
+    const speedX = Math.random() * 4 - 2;
+    const speedY = Math.random() * 4 - 2;
   
-    // Update bubble position based on speed
-    bubble.style.left = parseFloat(bubble.style.left) + speedX + 'px';
-    bubble.style.top = parseFloat(bubble.style.top) + speedY + 'px';
+    // Update bubble position based on speed and scrollSpeed
+    bubble.style.left = parseFloat(bubble.style.left) + speedX + scrollSpeed + 'px';
+    bubble.style.top = parseFloat(bubble.style.top) + speedY + scrollSpeed + 'px';
   
-    // Check for edge collisions and reverse direction
+    // Keep bubbles within the viewport boundaries
     const bubbleWidth = bubble.offsetWidth;
     const bubbleHeight = bubble.offsetHeight;
-  
-    if (bubble.style.left + bubbleWidth >= window.innerWidth) {
-      speedX *= -1;
-      bubble.style.left = window.innerWidth - bubbleWidth - bubble.offsetWidth / 2 + 'px'; // Adjust position
-    } else if (bubble.style.left <= 0) {
-      speedX *= -1;
-      bubble.style.left = 0 + bubble.offsetWidth / 2 + 'px'; // Adjust position
-    }
-  
-    if (bubble.style.top + bubbleHeight >= window.innerHeight) {
-      speedY *= -1;
-      bubble.style.top = window.innerHeight - bubbleHeight - bubble.offsetHeight / 2 + 'px'; // Adjust position
-    } else if (bubble.style.top <= 0) {
-      speedY *= -1;
-      bubble.style.top = 0 + bubble.offsetHeight / 2 + 'px'; // Adjust position
-    }
-  
-    // Detect collisions between bubbles
-    detectBubbleCollisions(bubble);
+    bubble.style.left = Math.max(0, Math.min(bubble.style.left, window.innerWidth - bubbleWidth));
+    bubble.style.top = Math.max(0, Math.min(bubble.style.top, window.innerHeight - bubbleHeight));
   
     // Schedule the next animation frame
     requestAnimationFrame(function() {
       moveBubbles(bubble);
     });
   }
+  
+  // Create and animate 3 bubbles
+  for (let i = 0; i < 3; i++) {
+    createBubble(images[i], links[i]);
+  }
+  
+  // Add scroll event listener
+  window.addEventListener('scroll', function() {
+    const deltaY = window.scrollY - scrollSpeed; // Calculate scroll delta
+    scrollSpeed = window.scrollY; // Update scrollSpeed
+  
+    // Adjust bubble movement based on scroll direction
+    if (deltaY > 0) {
+      // Scroll down
+      scrollSpeed += 0.1; // Increase scroll speed
+    } else if (deltaY < 0) {
+      // Scroll up
+      scrollSpeed -= 0.1; // Decrease scroll speed
+    }
+  });
   
   function detectBubbleCollisions(bubble) {
     const allBubbles = document.querySelectorAll('.bubble');
