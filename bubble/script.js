@@ -1,8 +1,8 @@
 const bubbleContainer = document.querySelector('.bubble-container');
 const images = [
-  "https://Kafkasullaspiaggia.github.io/pinkwednesday/bubble/FR_HD.png",
-  "https://Kafkasullaspiaggia.github.io/pinkwednesday/bubble/ITA_HD.png",
-  "https://Kafkasullaspiaggia.github.io/pinkwednesday/bubble/NORD_HD.png"
+  'https://raw.githubusercontent.com/Kafkasullaspiaggia/pinkwednesday/main/bubble/img/FR_HD.png',
+  'https://raw.githubusercontent.com/Kafkasullaspiaggia/pinkwednesday/main/bubble/img/ITA_HD.png',
+  'https://raw.githubusercontent.com/Kafkasullaspiaggia/pinkwednesday/main/bubble/img/NORD_HD.png',
 ];
 const links = [
   'https://www.example1.com',
