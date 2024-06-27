@@ -28,7 +28,7 @@ body{
   }
   
   .front{
-    background-image: url("https://github.com/Kafkasullaspiaggia/pinkwednesday/blob/main/man12/pic/Emre.png);
+    background-image: url("https://raw.githubusercontent.com/Kafkasullaspiaggia/pinkwednesday/main/man12/pic/Emre.png");
     z-index: 2;
     backface-visibility: hidden;
     background-size: cover;
