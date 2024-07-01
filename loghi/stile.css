@@ -1,0 +1,33 @@
+/* Stile contenitore sfera */
+.contenitore-sfera {
+    display: inline-block; /* Mantiene gli elementi affiancati */
+    margin: 20px; /* Spazio tra i contenitori */
+    width: 150px; /* Dimensione iniziale della sfera */
+    height: 150px; /* Dimensione iniziale della sfera */
+    border-radius: 50%; /* Crea la forma sferica */
+    overflow: hidden; /* Nasconde le parti dell'immagine che fuoriescono */
+    position: relative; /* Posiziona l'immagine all'interno della sfera */
+}
+
+/* Stile immagine */
+.contenitore-sfera img {
+    width: 100%; /* Espande l'immagine per coprire la sfera */
+    height: 100%; /* Espande l'immagine per coprire la sfera */
+    transform: translate(-50%, -50%); /* Centra l'immagine all'interno della sfera */
+    position: absolute; /* Posiziona l'immagine all'interno del contenitore */
+    top: 50%;
+    left: 50%;
+}
+
+/* Stile hover opzionale */
+.contenitore-sfera:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Stile link */
+.contenitore-sfera a {
+    display: block; /* Assicura che l'intero contenitore sia cliccabile */
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Rimuove la sottolineatura dal link */
+}
