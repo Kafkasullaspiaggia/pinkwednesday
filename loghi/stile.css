@@ -31,3 +31,10 @@
     height: 100%;
     text-decoration: none; /* Rimuove la sottolineatura dal link */
 }
+
+.contenitore-orbitale {
+    position: relative; /* Posiziona il contenitore orbitale relativamente al suo contenitore */
+    width: 500px; /* Dimensione del contenitore orbitale */
+    height: 500px; /* Dimensione del contenitore orbitale */
+    margin: 0 auto; /* Centra il contenitore orbitale nella pagina */
+}
