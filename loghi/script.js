@@ -9,9 +9,11 @@ function posizionaSfera(contenitoreSfera, angolo) {
     const x = centroOrbitale.x + raggioOrbitale * Math.cos(angolo);
     const y = centroOrbitale.y + raggioOrbitale * Math.sin(angolo);
 
-    contenitoreSfera.style.left = `${x}px`;
-    contenitoreSfera.style.top = `${y}px`;
-}
+    const offsetX = contenitoreSfera.offsetWidth / 2;
+    const offsetY = contenitoreSfera.offsetHeight / 2;
+    const maxX = window.innerWidth - offsetX;
+    const maxY = window.innerHeight - offsetY;
+
 
 function animaOrbita() {
     let angolo = 0;
