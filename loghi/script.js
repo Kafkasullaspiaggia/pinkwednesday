@@ -13,7 +13,6 @@ function posizionaSfera(contenitoreSfera, angolo) {
     const offsetY = contenitoreSfera.offsetHeight / 2;
     const maxX = window.innerWidth - offsetX;
     const maxY = window.innerHeight - offsetY;
-}
 
 function animaOrbita() {
     let angolo = 0;
