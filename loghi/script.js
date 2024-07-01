@@ -17,7 +17,7 @@ function animaOrbita() {
     let angolo = 0;
 
     setInterval(() => {
-        angolo += 0.05; // Velocità di rotazione (in radianti)
+        angolo += 0.005; // Velocità di rotazione (in radianti)
 
         for (let i = 0; i < contenitoriSfera.length; i++) {
             posizionaSfera(contenitoriSfera[i], angolo + i * Math.PI * 2 / 3); // Distribuisce le sfere uniformemente
